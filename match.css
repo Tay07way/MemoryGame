@@ -1,0 +1,47 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(215, 223, 252) 0%,
+    rgb(255, 255, 255) 0%,
+    rgb(215, 223, 252) 84%
+  );
+  height: 100vh;
+  text-align: center;
+  margin: 0, auto;
+  display: block;
+}
+
+#game div {
+  border: 1px solid black;
+  width: 18%;
+  height: 350px;
+  margin: 10px;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inactive {
+  opacity: 0;
+}
+
+.pending {
+  animation: reveal 1s 1;
+}
+
+.active {
+  animation: reveal 1s 1;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
